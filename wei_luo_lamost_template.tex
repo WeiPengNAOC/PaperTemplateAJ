@@ -47,6 +47,7 @@
 \usepackage[a4paper=true,dvipdfm=true]{hyperref}
 \usepackage{multirow}
 \slugcomment{Not to appear in Nonlearned J., 45.}
+\usepackage{ctex}
 
 %% If you wish, you may supply running head information, although
 %% this information may be modified by the editorial offices.
@@ -82,20 +83,20 @@
 %% affiliation information with \altaffiltext, with one command per each
 %% affiliation.
 
-\author{Peng Wei\altaffilmark{1, 2}, Ali Luo*\altaffilmark{1, 3}, Yinbi Li\altaffilmark{1}, }
+\author{Peng Wei£¨Î¤Åô£©\altaffilmark{1, 2}, Ali Luo£¨ÂÞ°¢Àí£©*\altaffilmark{1, 3}, Yinbi Li£¨ÀîÒñ±Ì£©\altaffilmark{1}, }
 \affil{Key Laboratory of Optical Astronomy, National Astronomical Observatories,   Chinese Academy of Sciences,  Beijing,  100012,  China}
 \email{lal@nao.cas.cn weipeng@nao.cas.cn}
 
-\author{Jingchang Pan\altaffilmark{3},Bin Jiang \altaffilmark{3}, }
+\author{Jingchang Pan£¨ÅË¾°²ý£©\altaffilmark{3},Bin Jiang£¨½ª±ó£© \altaffilmark{3}, }
 \affil{School of Mechanical,  Electrical and Information Engineering,  Shandong University, Weihai,  264209,  China}
 
-\author{Fengfei Wang\altaffilmark{1}, Jiannan Zhang\altaffilmark{1}, Liangping Tu \altaffilmark{1, 4}, Yongheng Zhao\altaffilmark{1}, Jianjun Chen\altaffilmark{1, 2}, Xiaoyan Chen\altaffilmark{1}, Bing Du\altaffilmark{1}, Yanxin Guo\altaffilmark{1}, Wen Hou\altaffilmark{1, 2}, , Xiao Kong\altaffilmark{1, 2}, Juanjuan Ren \altaffilmark{1, 2}, Yihan Song\altaffilmark{1}, Mengxin Wang\altaffilmark{1}, Yue Wu\altaffilmark{1}, Haifeng Yang \altaffilmark{1, 2, 5}, Fang Zuo\altaffilmark{1}, }
+\author{Fengfei Wang£¨Íõ·ï·É£©\altaffilmark{1}, Jiannan Zhang£¨ÕÅ½¡éª£©\altaffilmark{1}, Liangping Tu£¨ÍÀÁ¼Æ½£© \altaffilmark{1, 4}, Yongheng Zhao£¨ÕÔÓÀºã£©\altaffilmark{1}, Jianjun Chen£¨³Â½¨¾ü£©\altaffilmark{1, 2}, Xiaoyan Chen £¨³ÂÏþÑÞ£©\altaffilmark{1}, Bing Du£¨¶Å±ù£©\altaffilmark{1}, Yanxin Guo£¨¹ùÑ×öÎ£©\altaffilmark{1}, Wen Hou£¨ºîÎÄ£©\altaffilmark{1, 2}, , Xiao Kong£¨¿×Ð¥£©\altaffilmark{1, 2}, Juanjuan Ren£¨ÈÎ¾ê¾ê£© \altaffilmark{1, 2}, Yihan Song £¨ËÎéóêÏ£©\altaffilmark{1}, Mengxin Wang£¨ÍôÃÎÐÀ£©\altaffilmark{1}, Yue Wu£¨ÎâÔÃ£©\altaffilmark{1}, Haifeng Yang£¨Ñîº£·å£© \altaffilmark{1, 2, 5}, Fang Zuo£¨×ó·¼£©\altaffilmark{1}, }
 \affil{Key Laboratory of Optical Astronomy, National Astronomical Observatories,   Chinese Academy of Sciences,  Beijing,  100012,  China}
 
-\author{Jie Liu\altaffilmark{3}, Zhenping Yi\altaffilmark{1, 2, 3}, }
+\author{Jie Liu£¨Áõ½Ü£©\altaffilmark{3}, Zhenping Yi£¨ÒÂÕñÆ¼£©\altaffilmark{1, 2, 3}, }
 \affil{School of Mechanical,  Electrical and Information Engineering,  Shandong University, Weihai,  264209,  China}
 
-\author{Ge Jin\altaffilmark{6}}
+\author{Ge Jin£¨½ð¸ï£©\altaffilmark{6}}
 \affil{University of Science and Technology of China,  Hefei 230026,  China}
 \altaffiltext{1}{Key Laboratory of Optical Astronomy,National Astronomical Observatories,  Chinese Academy of Sciences, Beijing, 100012, China}
 \altaffiltext{2}{University of Chinese Academy of Sciences, Beijing, 100049, China}
@@ -111,8 +112,9 @@
 %% editorial office after submission.
 
 \begin{abstract}
-The LAMOST spectra analysis pipeline is one of LAMOST softwares to produce and analyze spectra,
-and its aim is to classify and measure the spectra observed in the survey.
+The LAMOST spectra analysis pipeline,
+so called 1D pipeline,
+aims to classify and measure the spectra observed in LAMOST survey.
 Through this pipeline, the observed stellar spectra are classified into different sub-classes by matching with templates spectra.
 Consequently, the performance of the stellar classification greatly depends on the quality of template spectra.
 %This paper presents the construction of the new stellar classification templates library for the LAMOST Spectra Analysis Pipeline.
@@ -134,7 +136,7 @@ About 5\% outliers are ruled out from one million spectra.
 II) All remaining spectrum are reconstructed using by the first principal components of each group.
 III) The weighted average spectrum is made as the template spectrum in each group.
 Through previous three steps,
-we initially obtain  stellar template spectra in 216 groups.
+we initially obtain  216 stellar template spectra.
 We visually inspect all template spectra,
 and 42 spectra are abandoned due to low spectral quality.
 Furthermore, the MK classification for the remaining 174 template spectrum is manually determined by comparing with three template libraries.
@@ -259,12 +261,12 @@ The calculation method is described in detail  as follows.
 
 The g-r color  is a indicator of stellar surface effective temperature ($Teff$) \citep{lee2008segue,ivezic2008milky},
 so we select objects with SDSS $ugriz$ magnitudes and signal to noise ratio (SNR) larger than 20 to check  whether
-the $g^*-r^*$  color is consistent with $Teff$.
+the $g^*-r^*$  color is consistent with $T_{eff}$.
 The average value and standard deviation of $g^*$-$r^*$ for different spectral types (O, B, A, F, G, K, M-type) are shown in Figure \ref{Fig1}, and we can see that the $g^*$-$r^*$ color varies obviously for each spectral type.
 
 
 For these selected objects, the relationship between g-r color and $g^*$-$r^*$ is  shown in Fig.\ref{Fig2}.
-There is a obvious linear relationship between the two colors,
+There is an obvious linear relationship between the two colors,
 and the derived best-fit expression is shown in formula \ref{eq2}:
 \begin{equation}
  g-r=0.807* (g^*-r^*)+  0.655
@@ -273,7 +275,7 @@ and the derived best-fit expression is shown in formula \ref{eq2}:
 
 
 
-\citet{ivezic2008milky} derived a relation between the Teff and the color g-r in the range of $-0.3 < g-r < 1.3$ for SDSS spectra:
+\citet{ivezic2008milky} derived a relation between the $T_{eff}$ and the color g-r in the range of $-0.3 < g-r < 1.3$ for SDSS spectra:
 \begin{equation}
  Log_{10} (T_{eff}/K)=0.0283* (g-r)^3 + 0.0488* (g-r)^2 - 0.316* (g-r) +3.882
  \label{grrel}
@@ -639,6 +641,9 @@ the weighted average spectra are constructed as the template spectra in the grou
 Afterwards, each template spectrum  is assigned with a MK type by comparing with three libraries and visual inspection.
 Finally, the new stellate classification templates library LAMOST spectra analysis pipeline consists of 176 spectra and 71 different MK classes,
 and it has been used for new version of LAMOST spectra analysis Pipeline and is published on the website \footnote{\url{http://sciwiki.lamost.org/lamost_sctl/v1}}.
+With the survey progress,
+more and more spectra will be gathered,
+and making a complete template library is our goal.
 
 
 %% If you wish to include an acknowledgments section in your paper,
