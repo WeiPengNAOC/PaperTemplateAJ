@@ -41,13 +41,15 @@
 %% for information.
 
 \newcommand{\vdag}{(v)^\dagger}
-\newcommand{\myemail}{skywalker@galaxy.far.far.away}
+\newcommand{\myemail}{weipeng@nao.cas.cn}
 
 %% You can insert a short comment on the title page using the command below.
 \usepackage[a4paper=true,dvipdfm=true]{hyperref}
 \usepackage{multirow}
-\slugcomment{Not to appear in Nonlearned J., 45.}
-\usepackage{ctex}
+%\slugcomment{Not to appear in Nonlearned J., 45.}
+
+%%we add this package to support the author's chinese names
+%\usepackage{ctex}
 
 %% If you wish, you may supply running head information, although
 %% this information may be modified by the editorial offices.
@@ -83,20 +85,18 @@
 %% affiliation information with \altaffiltext, with one command per each
 %% affiliation.
 
-\author{Peng Wei£¨Î¤Åô£©\altaffilmark{1, 2}, Ali Luo£¨ÂÞ°¢Àí£©*\altaffilmark{1, 3}, Yinbi Li£¨ÀîÒñ±Ì£©\altaffilmark{1}, }
+\author{Peng Wei\altaffilmark{1, 2}, Ali Luo*\altaffilmark{1, 3}, Yinbi Li\altaffilmark{1} , Liangping Tu \altaffilmark{1, 4}, Fengfei Wang\altaffilmark{1}, Jiannan Zhang\altaffilmark{1}, Xiaoyan Chen \altaffilmark{1}, Wen Hou\altaffilmark{1, 2}, Xiao Kong\altaffilmark{1, 2},Yue Wu \altaffilmark{1},Fang Zuo \altaffilmark{1}}
 \affil{Key Laboratory of Optical Astronomy, National Astronomical Observatories,   Chinese Academy of Sciences,  Beijing,  100012,  China}
 \email{lal@nao.cas.cn weipeng@nao.cas.cn}
 
-\author{Jingchang Pan£¨ÅË¾°²ý£©\altaffilmark{3},Bin Jiang£¨½ª±ó£© \altaffilmark{3}, }
+\author{Jingchang Pan\altaffilmark{3},Bin Jiang \altaffilmark{3},Jie Liu\altaffilmark{3}, Zhenping Yi\altaffilmark{1, 2, 3} }
 \affil{School of Mechanical,  Electrical and Information Engineering,  Shandong University, Weihai,  264209,  China}
 
-\author{Fengfei Wang£¨Íõ·ï·É£©\altaffilmark{1}, Jiannan Zhang£¨ÕÅ½¡éª£©\altaffilmark{1}, Liangping Tu£¨ÍÀÁ¼Æ½£© \altaffilmark{1, 4}, Yongheng Zhao£¨ÕÔÓÀºã£©\altaffilmark{1}, Jianjun Chen£¨³Â½¨¾ü£©\altaffilmark{1, 2}, Xiaoyan Chen £¨³ÂÏþÑÞ£©\altaffilmark{1}, Bing Du£¨¶Å±ù£©\altaffilmark{1}, Yanxin Guo£¨¹ùÑ×öÎ£©\altaffilmark{1}, Wen Hou£¨ºîÎÄ£©\altaffilmark{1, 2}, , Xiao Kong£¨¿×Ð¥£©\altaffilmark{1, 2}, Juanjuan Ren£¨ÈÎ¾ê¾ê£© \altaffilmark{1, 2}, Yihan Song £¨ËÎéóêÏ£©\altaffilmark{1}, Mengxin Wang£¨ÍôÃÎÐÀ£©\altaffilmark{1}, Yue Wu£¨ÎâÔÃ£©\altaffilmark{1}, Haifeng Yang£¨Ñîº£·å£© \altaffilmark{1, 2, 5}, Fang Zuo£¨×ó·¼£©\altaffilmark{1}, }
+\author{Yongheng Zhao\altaffilmark{1}, Jianjun Chen\altaffilmark{1, 2}, Bing Du\altaffilmark{1}, Yanxin Guo\altaffilmark{1},  Juanjuan Ren\altaffilmark{1, 2}, Yihan Song\altaffilmark{1}, Mengxin Wang \altaffilmark{1}, Kefei Wu\altaffilmark{1},Haifeng Yang\altaffilmark{1, 2, 5}, }
 \affil{Key Laboratory of Optical Astronomy, National Astronomical Observatories,   Chinese Academy of Sciences,  Beijing,  100012,  China}
 
-\author{Jie Liu£¨Áõ½Ü£©\altaffilmark{3}, Zhenping Yi£¨ÒÂÕñÆ¼£©\altaffilmark{1, 2, 3}, }
-\affil{School of Mechanical,  Electrical and Information Engineering,  Shandong University, Weihai,  264209,  China}
 
-\author{Ge Jin£¨½ð¸ï£©\altaffilmark{6}}
+\author{Ge Jin\altaffilmark{6}}
 \affil{University of Science and Technology of China,  Hefei 230026,  China}
 \altaffiltext{1}{Key Laboratory of Optical Astronomy,National Astronomical Observatories,  Chinese Academy of Sciences, Beijing, 100012, China}
 \altaffiltext{2}{University of Chinese Academy of Sciences, Beijing, 100049, China}
@@ -138,10 +138,10 @@ III) The weighted average spectrum is made as the template spectrum in each grou
 Through previous three steps,
 we initially obtain  216 stellar template spectra.
 We visually inspect all template spectra,
-and 42 spectra are abandoned due to low spectral quality.
-Furthermore, the MK classification for the remaining 174 template spectrum is manually determined by comparing with three template libraries.
+and 29 spectra are abandoned due to low spectral quality.
+Furthermore, the MK classification for the remaining 187 template spectrum is manually determined by comparing with three template libraries.
 Meanwhile, 10 template spectra whose subclass is difficult to determine are abandoned.
-Finally, we obtain a new template library containing 176 LAMOST template spectra with 71 different MK classes by combing with current library.
+Finally, we obtain a new template library containing 183 LAMOST template spectra with 61 different MK classes by combing with current library.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. The uncommented
@@ -287,7 +287,7 @@ Thus, we are able to derive a expression shown in the formula \ref{eq3} between 
 \end{equation}
 
 The LAMOST Stellar Parameter pipeline (LASP, see  \citet{wu2011automatic}) provides
-effective $Teff$, $log g$  and $[Fe/H]$ for 1,085,404  A,F, G and K-type spectra.
+effective $T_{eff}$, $log g$  and $[Fe/H]$ for 1,085,404  A,F, G and K-type spectra.
 The relationship between $g^*$-$r^*$  color and $T_{eff}$ is shown in  Figure \ref{Fig3}
 and the derived   polynomial expression is as shown in formula \ref{eq4}:
 \begin{equation}
@@ -295,7 +295,7 @@ Log_{10} (T_{eff}/K)=0.0432* (g^*-r^*)^3 +0.0107* (g^*-r^*)^2 -0.165* (g^*-r^*) 
 \label{eq4}
 \end{equation}
 
-As shown in Fig.\ref{Fig3}, the formulas \ref{eq3} and \ref{eq4}  nearly  coincide with each other in the range of Teff [5500K,7000K].
+As shown in Fig.\ref{Fig3}, the formulas \ref{eq3} and \ref{eq4}  nearly  coincide with each other in the range of $T_{eff}$ [5500K,7000K].
 Thus, the defined $g^*$-$r^*$ color is also be a indicator of $Teff$,
 which is used to divide the selected spectra into different groups.
 
@@ -305,7 +305,7 @@ which is used to divide the selected spectra into different groups.
 
 In order to construct different kinds of LAMOST templates, we divide these spectra into 233 different groups by the proposed $g^*$-$r^*$ color and the stellar subclass classified by the LAMOST 1D pipeline using the current template library.
 
-As discussed above, the proposed $g^*$-$r^*$ color is a good indicator of Teff.
+As discussed above, the proposed $g^*$-$r^*$ color is a good indicator of $T_{eff}$.
 Therefore, we select these spectra with $g^*$-$r^*$ in  the range[-1.5,2.0], and divide them into 175 groups with 0.02 mag width interval.
 These groups are marked with group-id from 1 to 175,
 and the the number distribution is shown in Figure \ref{Fig4}.
@@ -322,7 +322,7 @@ These groups are marked with group-id from 176 to 233.
 and we put these spectra into groups with group-id from 220 to 229.
 %We have divided these spectra into groups with group id as shown in Table \ref{tab1}.
   \citet{zhao201370}  presented a spectroscopically identified catalog of 70 DA white dwarfs  (WDs),
-  and \citet{zhang2013white}  identified 230 other DA  white dwarfs,
+  and \citet{zhang2013white}  identified other 230  DA  white dwarfs,
 We combine these two catalogs and put them into group 233.
   \citet{jiang2013data} reported the identification of 10 cataclysmic variables,
 and we allocate a group id 204 for these spectra.
@@ -360,7 +360,7 @@ The Principal Component Analysis  (PCA, see \cite{jolliffe2002principal}) is a m
 The number of principal components is less than or equal to the number of original variables.
 This transformation is defined in such a way that the first principal component has the largest possible variance  (that is,  accounts for as much of the variability in the data as possible).
 
-As a feasible tool, Principal Component Analysis (PCA) has been applied  in the classification of spectra \citep{whitney1983principal,bailer1998automated,yip2004spectral,almeida2013automated} by  reducing the dimensionality of the original spectral data to very few components.
+As a feasible tool, Principal Component Analysis (PCA) has been applied  in the classification and outlier detection of spectra \citep{whitney1983principal,bailer1998automated,yip2004spectral,tu2009new,tu2010method,almeida2013automated,wei2013mining,jiang2013data} by  reducing the dimensionality of the original spectral data to very few components.
 PCA are also able to successfully reconstruct the original spectra by using the first few components \citep{singh1998stellar}.
 In our work, PCA is used to reconstruct the original spectra to improve the similarity of spectra in the same group.
 %and each succeeding component in turn has the highest variance possible under the constraint that it be orthogonal to   (i.e.,  uncorrelated with) the preceding components.	
@@ -447,47 +447,62 @@ the best matched template is picked out and our constructed template is assigned
 
 \end{enumerate}
 
-Finally,  there are 164 template spectra remaining with 59 different MK classes in the template library.
+Finally,  there are 177 template spectra remaining with 55 different MK classes in the template library.
 %and they are publicly available on the web site:\url{http://sciwiki.lamost.org/lamost_sctl/v1}.
 
 \section{The finally combined template library used in the LAMOST spectra analysis pipeline}
 \label{sect:Results}
-A new template library is formed by combining our newly constructed templates and the current templates in LAMOST 1D pipeline,
-and the these templates with subclasses in our constructed templates are removed from the library.
+The new stellar template library consists of the  newly constructed templates and six templates in current pipeline,
+and there are 183 spectra and 61 different MK classes  left in the combined template library.
 %The template spectra with  subclasses in our library are removed from the current library.
 %As shown in Table \ref{tab4},
 %there are 176 template spectra with 71 different subclasses in the new template library.
 \subsection{Comparison with the  template library in current LAMOST spectra analysis pipeline}
-The new stellar template library consists of the  newly constructed templates and the templates in current pipeline and there are 176 spectra and 71 different MK classes  left in the combined template library.
 As shown in Table \ref{tab4},
 our constructed templates replace most templates of the  current library.
 We describe in detail the finally combined library as follows.
 \begin{itemize}
-\item \emph{O-type Spectra} Due to the lack of enough O-type spectra in LAMOST DR1,
-no O-type templates are successfully constructed and we remain the two O-type templates in current library.
-Therefore, there are two types of spectra.
-\item \emph{B-type Spectra} There are 26 B-type templates and 6 different subclasses.
-The amount of the templates and the subclasses are both larger than that of the current library and these templates are all newly constructed in our  new library.
-\item \emph{A-type Spectra} Due to the difficulty of accurate manually classifying using so many A-type template from MILES,
-these templates constructed from the groups formed by the $g^*$-$r^*$ color are abandoned.
-In other words, all A-type templates in our constructed library are constructed from the groups formed by the subclass given by current library.
-Among these 24 templates in current library,
-18 templates are replaced by newly constructed ones and the other 6 template are kept.
+\item \emph{O-type and B-type Spectra} Due to the lack of enough O-type and B-type spectra in LAMOST DR1,
+no O-type and B-type templates are successfully constructed and we remain the four O-type and B-type templates in current library.
+Therefore, there are four types of spectra.
+%\item \emph{B-type Spectra} There are 26 B-type templates and 6 different subclasses.
+%The amount of the templates and the subclasses are both larger than that of the current library and these templates are all newly constructed in our  new library.
+\item \emph{A-type Spectra}
+After visual inspection of all constructed templates,
+there are 49 spectra with 13 different MK classes  left in the combined template library.
+These template covers two types of A-type giant star,
+and one is A0-type (early A-type) giant while another one is A7-type (late A-type) giant.
+For A-type dwarf stars,
+there are more than one templates of each subclass.
+Meanwhile,
+other types of A-type templates from MILES are abandoned due to the wavelength coverage.
+%Due to the difficulty of accurate manually classifying using so many A-type template from MILES,
+%these templates constructed from the groups formed by the $g^*$-$r^*$ color are abandoned.
+%In other words, all A-type templates in our constructed library are constructed from the groups formed by the subclass given by current library.
+%Among these 24 templates in current library,
+%18 templates are replaced by newly constructed ones and the other 6 template are kept.
 \item \emph{F, G and K-type Spectra} As the most common types of spectra in the survey,
 F, G and K-type spectra account for more than 88 percent of the total.
 The 11 F, G and K-type templates in current library are totally replaced by newly constructed templates.
-There are 87 templates and 20 subclasses,
+There are 84 templates and 26 subclasses,
 which significantly exceeds the amount of the templates and the subclasses in current library.
 What's more,
 there are more than one templates for the vast majority of the subclasses.
+These templates cover nearly all subclasses for F, G and K-type spectra.
+
 \item \emph{M-type Spectra}
 There are 122,718 M-type spectra and current pipeline classified these spectra into 12 subclasses.
-There are 10 subclasses successfully reconstructed and  other 2 templates are kept in the finally combined library.
-Hence, there are 30 templates with 12 different subclasses.
+The two templates M2V and M0V are abandoned.
+%There are 10 subclasses successfully reconstructed and  other 2 templates are kept in the finally combined library.
+Finally, there are 28 M-type templates with 10 different subclasses.
+For early M-type subclasses,
+there are more than five template spectra while there are only one spectra for each subclass in current library.
+
+
 \item \emph{Other-type Spectra}
 There are five relatively rare types of stellar spectra in current library,
 and three templates are newly reconstructed.
-Meanwhile, two new types (Binary for the spectra of obvious binary stars and CV for the spectra cataclysmic variable stars) are added.
+Meanwhile, two new types (Double star for the spectra with two obvious components and CV for the spectra cataclysmic variable stars) are added.
 That's to say,
 there are 7 templates with 7 relatively rare types.
 Here, we note that \emph{detailed works are needed to produce more complete and purer  samples of these rare types of stars,
@@ -509,7 +524,7 @@ For B-type spectra, there are less templates and subclasses in final library tha
 From SDSS casjobs,
 we get that there are 80 subclasses which contain less than 500 spectra in SDSS DR9
 and  there are only 12,897 spectra (about 1.66\% in all 773,275 spectra) with these subclasses.
-Besides, only 1,062 spectra  with SNR$>10$ (about 0.22\% in all 475694 spectra) and
+Besides, only 1,062 spectra  with SNR$>10$ (about 0.22\% in all 475,694 spectra with SNR$>10$) and
 the average SNR of these spectra is about 4.93 which is much less the one of all spectra.
 In other words, the other 43 stellar subclasses contains most spectra especially these spectra with high SNR.
 Moreover, these spectra are different from LAMOST spectra in spectral resolution, instrumental effect and processing process.
@@ -524,10 +539,10 @@ Hence, we do not add these templates in  \citet{bolton2012spectral} into our fin
 \subsection{Examples}
 Here we choose four typical templates(see Fig \ref{Fig6} for the template spectra)  to  discuss the construction process and the constructed template spectra in detail.
 The main information of these templates is shown in Table \ref{tab2}.
-Their template-id are 69, 34, 176, 159,
+Their template-id are 69, 10, 183, 159,
 constructed in group 59, 179 ,204 and 222, and
-the MK classes are F5V, A1IV, CV and M2 respectively.
-\subsubsection{Template \#69 Subclass:F5V}
+the MK classes are F5, A1IV, CV and M2 respectively.
+\subsubsection{Template \#69 Subclass:F5}
 \label{sec:conexamples}
 The template \#69 is constructed from the group \#59,
 which contains the spectra in the color $g^*$-$r^*$ range [-0.34,-0.32].
@@ -543,8 +558,8 @@ The zoomed figure shows that the strong features such as  the Blamer lines and  
 
 
 
-\subsubsection{Template \#34 Subclass: A1IV}
-The template \#34 is constructed from the group \#179,
+\subsubsection{Template \#10 Subclass: A1IV}
+The template \#10 is constructed from the group \#179,
 which contains the spectra classified as `A1IV' by current LAMOST spectra analysis pipeline.
 There are totally 653 spectra in this group.
 Among these spectra, 517 spectra are used to get the principal components which are used in the spectra reconstruction.
@@ -554,12 +569,12 @@ In spite of this, the template spectrum is well constructed after excluding thes
 After excluding outliers, 381 spectra are left to construct the template spectrum.
 The stellar spectral subclass is finally labeled as `A1IV'.
 The template spectra of group 179 is  shown in Fig \ref{Fig92},
-and we cans see that our constructed template is similar with even  a little better than the `A1IV' type template in  the current library.
+and we can see that our constructed template is similar with even  a little better than the `A1IV' type template in  the current library.
 
 
 
-\subsubsection{Template \#176 Subclass: CV}
-The template \#176 is constructed from the group \#204,
+\subsubsection{Template \#183 Subclass: CV}
+The template \#183 is constructed from the group \#204,
 which contains the spectra classified as `CV' by current LAMOST spectra analysis pipeline.
 There are totally 27 spectra in this group.
 Among these spectra, 23 spectra are used to get the principal components.
@@ -794,7 +809,7 @@ This work is supported by the National Natural Science Foundation of China  (Gra
     \begin{figure}
    \centering
    \includegraphics[width=14cm, angle=0,clip]{f6.eps}
-   \caption{The template spectra \#69, \#34, \#176 and \#159.
+   \caption{The template spectra \#69, \#10, \#183 and \#159.
    }
    \label{Fig6}
 \end{figure}
@@ -844,7 +859,7 @@ The black lines are the original spectra and the red lines are reconstructed spe
 \begin{figure}
    \centering
    \includegraphics[width=14cm, angle=0,clip]{f92.eps}
-   \caption{The comparison of the template spectrum \#34 with  A1IV type template in current library.
+   \caption{The comparison of the template spectrum \#10 with  A1IV type template in current library.
 The black line is the spectrum constructed in our work.
 The red one is the closest spectrum in current library.
    }
@@ -1007,90 +1022,79 @@ The red ones are the M2 type template in   current LAMOST library and \citet{boc
 \colhead{Subclass}&
 \colhead{C1}&
 \colhead{C2}&
-\colhead{C3}&
 \colhead{Template IDs}
 }
 \startdata
-O	&1	&O	&1	&0	&1	&1\\
-	&2	&OB	&1	&0	&1	&2\\
-B	&3	&B2	&0	&4	&4	&3-6\\
-	&4	&B3	&0	&2	&2	&7-8\\
-	&5	&B5	&0	&2	&2	&9-10\\
-	&6	&B6	&1	&1	&1	&11\\
-	&7	&B8	&0	&15	&15	&12-26\\
-	&8	&B9	&1	&2	&2	&27-28\\
-A	&9	&A0	&1	&0	&1	&29\\
-	&10	&A0I	&1	&1	&1	&30\\
-	&11	&A0III	&1	&1	&1	&31\\
-	&12	&A0V	&1	&0	&1	&32\\
-	&13	&A1III	&1	&0	&1	&33\\
-	&14	&A1IV	&1	&1	&1	&34\\
-	&15	&A1V	&1	&1	&1	&35\\
-	&16	&A2I	&1	&0	&1	&36\\
-	&17	&A2IV	&1	&1	&1	&37\\
-	&18	&A2V	&1	&1	&1	&38\\
-	&19	&A3I	&1	&0	&1	&39\\
-	&20	&A3IV	&1	&1	&1	&40\\
-	&21	&A3V	&1	&1	&1	&41\\
-	&22	&A4III	&1	&1	&1	&42\\
-	&23	&A4V	&1	&1	&1	&43\\
-	&24	&A5	&1	&0	&1	&44\\
-	&25	&A5I	&1	&1	&1	&45\\
-	&26	&A5V	&1	&1	&1	&46\\
-	&27	&A6IV	&1	&1	&1	&47\\
-	&28	&A6V	&1	&1	&1	&48\\
-	&29	&A7III	&1	&1	&1	&49\\
-	&30	&A7V	&1	&1	&1	&50\\
-	&31	&A9	&1	&1	&1	&51\\
-	&32	&A9V	&1	&1	&1	&52\\
-F	&33	&F0	&1	&4	&4	&53-56\\
-	&34	&F2	&1	&4	&4	&57-60\\
-	&35	&F3/F5V	&0	&7	&7	&61-67\\
-	&36	&F5	&1	&5	&5	&68-72\\
-	&37	&F6V	&0	&1	&1	&73\\
-	&38	&F8	&0	&1	&1	&74\\
-	&39	&F9	&1	&2	&2	&75-76\\
-G	&40	&G0	&1	&3	&3	&77-79\\
-	&41	&G2	&1	&9	&9	&80-88\\
-	&42	&G3V	&0	&1	&1	&89\\
-	&43	&G4V	&0	&2	&2	&90-91\\
-	&44	&G5	&1	&1	&1	&92\\
-	&45	&G7V	&0	&4	&4	&93-96\\
-	&46	&G8V	&0	&5	&5	&97-101\\
-	&47	&G9	&0	&2	&2	&102-103\\
-K	&48	&K0	&1	&1	&1	&104\\
-	&49	&K1	&1	&6	&6	&105-110\\
-	&50	&K3	&1	&9	&9	&111-119\\
-	&51	&K5	&1	&9	&9	&120-128\\
-	&52	&K7	&1	&11	&11	&129-139\\
-M	&53	&M0	&1	&10	&10	&140-149\\
-	&54	&M0V	&1	&0	&1	&150\\
-	&55	&M1	&1	&7	&7	&151-157\\
-	&56	&M2	&1	&2	&2	&158-159\\
-	&57	&M2V	&1	&0	&1	&160\\
-	&58	&M3	&1	&3	&3	&161-163\\
-	&59	&M4	&1	&1	&1	&164\\
-	&60	&M5	&1	&1	&1	&165\\
-	&61	&M6	&1	&1	&1	&166\\
-	&62	&M7	&1	&1	&1	&167\\
-	&63	&M8	&1	&1	&1	&168\\
-	&64	&M9	&1	&1	&1	&169\\
-other	&65	&Carbon	&1	&1	&1	&170\\
-	&66	&Carbon\_lines	&1	&1	&1	&171\\
-	&67	&WD	&1	&1	&1	&172\\
-	&68	&CarbonWD	&1	&0	&1	&173\\
-	&69	&WDmagnetic	&1	&0	&1	&174\\
-	&70	&Binary	&0	&1	&1	&175\\
-	&71	&CV	&0	&1	&1	&176\\
-sum	&	&	&57	&164	&176	&\\
+O	&1	&O	&0	&1	&1\\
+	&2	&OB	&0	&1	&2\\
+B	&3	&B6	&0	&1	&3\\
+	&4	&B9	&0	&1	&4\\
+A	&5	&A0III	&1	&1	&5\\
+	&6	&A1IV	&1	&1	&6\\
+	&7	&A1V	&4	&4	&7-10\\
+	&8	&A2IV	&3	&3	&11-13\\
+	&9	&A2V	&18	&18	&14-31\\
+	&10	&A3IV	&6	&6	&32-37\\
+	&11	&A3V	&2	&2	&38-39\\
+	&12	&A5V	&3	&3	&40-42\\
+	&13	&A6IV	&2	&2	&43-44\\
+	&14	&A6V	&3	&3	&45-47\\
+	&15	&A7III	&1	&1	&48\\
+	&16	&A7IV	&2	&2	&49-50\\
+	&17	&A7V	&2	&2	&51-52\\
+	&18	&A9V	&1	&1	&53\\
+F	&19	&F0	&4	&4	&54-57\\
+	&20	&F2	&2	&2	&58-59\\
+	&21	&F3	&2	&2	&60-61\\
+	&22	&F4	&1	&1	&62\\
+	&23	&F5	&7	&7	&63-69\\
+	&24	&F6	&4	&4	&70-73\\
+	&25	&F7	&2	&2	&74-75\\
+	&26	&F8	&1	&1	&76\\
+	&27	&F9	&2	&2	&77-78\\
+G	&28	&G0	&2	&2	&79-80\\
+	&29	&G1	&1	&1	&81\\
+	&30	&G2	&3	&3	&82-4\\
+	&31	&G3	&3	&3	&85-87\\
+	&32	&G4	&2	&2	&88-89\\
+	&33	&G5	&2	&2	&90-91\\
+	&34	&G6	&1	&1	&92=\\
+	&35	&G7	&3	&3	&93-95\\
+	&36	&G8	&4	&4	&96-99\\
+	&37	&G9	&3	&3	&100-102\\
+K	&38	&K0	&3	&3	&103-105\\
+	&39	&K1	&4	&4	&106-109\\
+	&40	&K2	&2	&2	&110-111\\
+	&41	&K3	&4	&4	&112-115\\
+	&42	&K4	&4	&4	&116-119\\
+	&43	&K5	&8	&8	&120-127\\
+	&44	&K7	&11	&11	&128-138\\
+M	&45	&M0	&10	&10	&139-148\\
+	&46	&M1	&6	&6	&149-154\\
+	&47	&M2	&5	&5	&155-159\\
+	&48	&M3	&7	&7	&160-166\\
+	&49	&M4	&1	&1	&167\\
+	&50	&M5	&1	&1	&168\\
+	&51	&M6	&2	&2	&169\\
+	&52	&M7	&2	&2	&171-172\\
+	&53	&M8	&2	&2	&173-174\\
+	&54	&M9	&2	&2	&175-176\\
+Other	&55	&Carbon	&1	&1	&177\\
+	&56	&Carbon\_lines	&1	&1	&178\\
+	&57	&WD	&1	&1	&179\\
+	&58	&CarbonWD	&0	&1	&180\\
+	&59	&WDmagnetic	&0	&1	&181\\
+	&60	&Binary	&1	&1	&182\\
+	&61	&CV	&1	&1	&183\\
+
 
 
 
 
 \enddata
-\tablecomments{C1 is the amount of templates with corresponding subclass in current library.
-C2 is the amount of   templates with corresponding subclass in our constructed library.
-C3 is the amount of   templates with corresponding subclass in the finally combined library.
+\tablecomments{
+C1 is the amount of   templates with corresponding subclass in our constructed library.
+C2 is the amount of   templates with corresponding subclass in the finally combined library.
 }
 \end{deluxetable}
 \clearpage
@@ -1110,12 +1114,12 @@ C3 is the amount of   templates with corresponding subclass in the finally combi
 }
 \startdata
 O	&3	&2	&2\\
-B	&30	&6	&26\\
-A	&19	&24	&24\\
-F	&19	&7	&24\\
-G	&15	&8	&27\\
-K	&19	&5	&36\\
-M	&12	&12	&30\\
+B	&30	&2	&2\\
+A	&19	&14	&49\\
+F	&19	&9	&25\\
+G	&15	&10	&23\\
+K	&19	&7	&36\\
+M	&12	&10	&28\\
 Others	&6	&7	&7\\
 \enddata
 \tablecomments{A1 is the Amount of templates in  \citet{bolton2012spectral}.
@@ -1128,7 +1132,7 @@ A2 is amount of subclasses in final library and A3 is  the amount of templates i
 \tabletypesize{\scriptsize}
 %\setlength{\tabcolsep}{0.05in}
 \tablewidth{0pt}
-\tablecaption{The main information of template \#69, \#34, \#176, \#159\label{tab2}}
+\tablecaption{The main information of template \#69, \#10, \#183, \#159\label{tab2}}
 \tablehead{
 \colhead{Template ID}&
 \colhead{Group ID}&
@@ -1140,9 +1144,9 @@ A2 is amount of subclasses in final library and A3 is  the amount of templates i
 \colhead{Subclass3}
 }
 \startdata
-69  &59  &18534    &3048  &F5V    &F3V/F5V  &F1V &F5   \\
-34  &179 &653    &381  &A1IV    &A4V/A1V  &A2V&A1V    \\
-176 &204 &27     &13  &CV    &-  &-&-    \\
+69  &59  &18534    &3048  &F5    &F3V/F5V  &F1V &F5   \\
+10  &179 &653    &381  &A1IV    &A4V/A1V  &A2V&A1V    \\
+183 &204 &27     &13  &CV    &-  &-&-    \\
 159 &222 &17231     &325  &M2    &M1/M0  &M1.5V/M3V&M2/M1    \\
 \enddata
 \tablecomments{Subclass is the finally labeled MK class.
